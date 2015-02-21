@@ -21,14 +21,14 @@ class LightsabersController < ApplicationController
   end
 
   def edit
-    @lightsaver = Lightsaber.find(params[:id])
+    @lightsaber = Lightsaber.find(params[:id])
   end
 
   def update
     @lightsaber = Lightsaber.find(params[:id])
       if @lightsaber.update(lightsaber_params)
         flash[:notice] = 'Lightsaber was successfully updated'
-        redirect_to lightsabers_path(lightsaber)
+        redirect_to lightsabers_path(@lightsaber)
       end
     end
 
