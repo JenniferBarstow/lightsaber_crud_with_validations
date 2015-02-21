@@ -1,0 +1,20 @@
+<h1>New Lightsaber</h1>
+<%= form_for @lightsaber do |f| %>
+<%= f.label :owner %>
+<%= f.text_field :owner %>
+<br>
+<%= f.label :color %>
+<%= f.text_field :color %>
+<br>
+<%= f.submit "Add Lightsaber" %>
+<% end %>
+
+<% if @lightsaber.errors.any? %>
+  <div class= "error_explanation">
+    <ul>
+    <% @lightsaber.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>

@@ -1,0 +1,23 @@
+<h1>Lightsabers</h1>
+
+<hr>
+<% @lightsabers.each do |lightsaber| %>
+Owner:
+<%= lightsaber.owner %>
+<br>
+Color:
+<%= lightsaber.color  %>
+<br>
+Created at:
+<%= lightsaber.created_at %>
+<br>
+Updated at:
+<%= lightsaber.updated_at %>
+<br>
+<br>
+<%= link_to "Edit", edit_lightsaber_path(lightsaber) %>
+<%= link_to "Delete", lightsaber_path(lightsaber), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "View", lightsaber_path(lightsaber) %>
+<hr>
+<% end %>
+<%= link_to "New Lightsaber", new_lightsaber_path %>
