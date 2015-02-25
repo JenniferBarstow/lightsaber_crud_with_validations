@@ -1,12 +1,10 @@
-Lightsaber: 
+Lightsaber:
+
+<%= image_tag("#{@random_gif}.gif") %>
 <br>
 Owner: <%= @lightsaber.owner %>
 <br>
 Color: <%= @lightsaber.color %>
-<br>
-Created: <%= @lightsaber.created_at %>
-<br>
-Updated :<%= @lightsaber.updated_at %>
 <br>
 <%= link_to "Edit", edit_lightsaber_path(@lightsaber) %>
 <%= link_to "Delete", lightsaber_path(@lightsaber), method: :delete, data: {confirm: "Are you sure?"} %>

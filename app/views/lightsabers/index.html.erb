@@ -8,12 +8,6 @@ Owner:
 Color:
 <%= lightsaber.color  %>
 <br>
-Created at:
-<%= lightsaber.created_at %>
-<br>
-Updated at:
-<%= lightsaber.updated_at %>
-<br>
 <br>
 <%= link_to "Edit", edit_lightsaber_path(lightsaber) %>
 <%= link_to "Delete", lightsaber_path(lightsaber), method: :delete, data: {confirm: "Are you sure?"} %>
